@@ -5,7 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Karla:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500&family=Oswald:wght@300;400&family=Playpen+Sans:wght@100;200;300;400;600;700;800&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e348b353f1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <section class="app">
+        <form action="" class="search">
+          <i class="fa-solid fa-location-dot search__icon--location"></i>
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter city"
+            class="search__input search__input--text"
+          />
+          <button class="search__input search__input--button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="weather">
+          <h1 class="weather__city">Radzionków</h1>
+          <i class="fa-solid fa-cloud weather__icon"></i>
+          <span class="weather__temp">2<sup>&deg;C</sup></span>
+          <span class="weather__condition">Cloudy</span>
+          <div class="condition--group">
+            <div class="condition">
+              <i class="fa-solid fa-wind condition__icon"></i>
+              <div class="condition__info">
+                <span class="condition__info--data">99%</span>
+                <span class="condition__info--name">wind</span>
+              </div>
+            </div>
+            <div class="condition">
+              <i class="fa-solid fa-wind condition__icon"></i>
+              <div class="condition__info">
+                <span class="condition__info--data">99%</span>
+                <span class="condition__info--name">wind</span>
+              </div>
+            </div>
+            <div class="condition">
+              <i class="fa-solid fa-wind condition__icon"></i>
+              <div class="condition__info">
+                <span class="condition__info--data">99%</span>
+                <span class="condition__info--name">wind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

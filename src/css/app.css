@@ -1,1 +1,106 @@
-/*# sourceMappingURL=app.css.map */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #12294d;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+.container .app {
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
+  width: 80%;
+}
+.container .app .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+.container .app .search .search__icon--location {
+  font-size: 25px;
+  padding: 5px;
+}
+.container .app .search .search__input {
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+.container .app .search .search__input--text {
+  width: 100%;
+}
+.container .app .search .search__input--text:focus {
+  outline: none;
+}
+.container .app .search .search__input--button {
+  background-color: #a5e2ff;
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  cursor: pointer;
+}
+.container .app .weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.container .app .weather .weather__city {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+.container .app .weather .weather__icon {
+  font-size: 100px;
+}
+.container .app .weather .weather__temp {
+  font-size: 50px;
+}
+.container .app .weather .weather__condition {
+  font-size: 20px;
+}
+.container .app .weather .condition--group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+.container .app .weather .condition--group .condition {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.container .app .weather .condition--group .condition .condition__icon {
+  font-size: 20px;
+}
+.container .app .weather .condition--group .condition .condition__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .app .weather .condition--group .condition .condition__info .condition__info--data {
+  font-size: 25px;
+}
+.container .app .weather .condition--group .condition .condition__info .condition__info--name {
+  font-size: 18px;
+}/*# sourceMappingURL=app.css.map */
