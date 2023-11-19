@@ -20,12 +20,11 @@
   <body>
     <main class="container">
       <section class="app">
-        <form action="" class="search">
+        <form class="search">
           <i class="fa-solid fa-location-dot search__icon--location"></i>
           <input
             type="text"
-            name=""
-            id=""
+            id="search__city"
             placeholder="Enter city"
             class="search__input search__input--text"
           />
@@ -33,35 +32,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
-        <div class="weather">
-          <h1 class="weather__city">Radzionków</h1>
-          <i class="fa-solid fa-cloud weather__icon"></i>
-          <span class="weather__temp">2<sup>&deg;C</sup></span>
-          <span class="weather__condition">Cloudy</span>
-          <div class="condition--group">
-            <div class="condition">
-              <i class="fa-solid fa-wind condition__icon"></i>
-              <div class="condition__info">
-                <span class="condition__info--data">99%</span>
-                <span class="condition__info--name">wind</span>
-              </div>
-            </div>
-            <div class="condition">
-              <i class="fa-solid fa-wind condition__icon"></i>
-              <div class="condition__info">
-                <span class="condition__info--data">99%</span>
-                <span class="condition__info--name">wind</span>
-              </div>
-            </div>
-            <div class="condition">
-              <i class="fa-solid fa-wind condition__icon"></i>
-              <div class="condition__info">
-                <span class="condition__info--data">99%</span>
-                <span class="condition__info--name">wind</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="weather--wrapper"></div>
       </section>
     </main>
   </body>

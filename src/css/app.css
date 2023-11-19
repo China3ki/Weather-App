@@ -27,6 +27,7 @@ body {
   width: 80%;
 }
 .container .app .search {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,50 +58,93 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-.container .app .weather {
+.container .app .weather--wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 1s;
+}
+.container .app .weather--wrapper .weather {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 10px;
+  min-height: 0;
 }
-.container .app .weather .weather__city {
-  font-size: 30px;
+.container .app .weather--wrapper .weather .weather__city {
+  font-size: 40px;
   letter-spacing: 1px;
   font-style: italic;
+  margin-top: 5px;
 }
-.container .app .weather .weather__icon {
-  font-size: 100px;
+.container .app .weather--wrapper .weather .weather__icon {
+  width: 150px;
+  object-fit: cover;
 }
-.container .app .weather .weather__temp {
+.container .app .weather--wrapper .weather .weather__temp {
   font-size: 50px;
 }
-.container .app .weather .weather__condition {
+.container .app .weather--wrapper .weather .weather__condition {
   font-size: 20px;
 }
-.container .app .weather .condition--group {
+.container .app .weather--wrapper .weather .weather__condition::first-letter {
+  text-transform: uppercase;
+}
+.container .app .weather--wrapper .weather .condition--group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   width: 100%;
+  margin-bottom: 5px;
 }
-.container .app .weather .condition--group .condition {
+.container .app .weather--wrapper .weather .condition--group .condition {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.container .app .weather .condition--group .condition .condition__icon {
+.container .app .weather--wrapper .weather .condition--group .condition .condition__icon {
   font-size: 20px;
 }
-.container .app .weather .condition--group .condition .condition__info {
+.container .app .weather--wrapper .weather .condition--group .condition img {
+  width: 40px;
+  height: 40px;
+}
+.container .app .weather--wrapper .weather .condition--group .condition .condition__info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container .app .weather .condition--group .condition .condition__info .condition__info--data {
+.container .app .weather--wrapper .weather .condition--group .condition .condition__info .condition__info--data {
   font-size: 25px;
 }
-.container .app .weather .condition--group .condition .condition__info .condition__info--name {
+.container .app .weather--wrapper .weather .condition--group .condition .condition__info .condition__info--name {
   font-size: 18px;
+}
+.container .app .weather--wrapper.show {
+  grid-template-rows: 1fr;
+}
+.container .app .weather--wrapper.fadein {
+  animation: fadein 0.5s ease-in;
+  opacity: 1;
+}
+.container .app .weather--wrapper.fadeout {
+  animation: fadeout 0.5s ease-out;
+  opacity: 0;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=app.css.map */

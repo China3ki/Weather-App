@@ -24,6 +24,7 @@ body {
         border-radius: 25px;
         width: 80%;
         .search {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,54 +54,89 @@ body {
                 padding: 10px;
                 cursor: pointer;
             }
+           
         }
-        .weather {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap:20px;
-            padding: 10px;
-            .weather__city {
-                font-size: 30px;
-                letter-spacing: 1px;
-                font-style: italic;
-            }
-            .weather__icon {
-                font-size: 100px;
-            }
-            .weather__temp {
-                font-size: 50px;
-            }
-            .weather__condition {
-                font-size: 20px;
-            }
-            .condition--group {
+        .weather--wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: grid-template-rows 1s;
+            .weather {
                 display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap:30px;
-                width: 100%;
-                .condition {
+                flex-direction: column;
+                align-items: center;
+                gap:20px;
+                min-height: 0;
+                .weather__city {
+                    font-size: 40px;
+                    letter-spacing: 1px;
+                    font-style: italic;
+                    margin-top: 5px;
+                }
+                .weather__icon {
+                    width: 150px;
+                    object-fit: cover;
+                }
+                .weather__temp {
+                    font-size: 50px;
+                }
+                .weather__condition {
+                    font-size: 20px;
+                }
+                .weather__condition::first-letter {
+                    text-transform: uppercase;
+                }
+                .condition--group {
                     display: flex;
-                    align-items: center;
-                    gap:5px;
-                    .condition__icon {
-                        font-size: 20px;
-                    }
-                    .condition__info {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap:30px;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    .condition {
                         display: flex;
-                        flex-direction: column;
                         align-items: center;
-                        .condition__info--data {
-                            font-size: 25px;
+                        gap:5px;
+                        .condition__icon {
+                            font-size: 20px;
                         }
-                        .condition__info--name {
-                            font-size: 18px;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .condition__info {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .condition__info--data {
+                                font-size: 25px;
+                            }
+                            .condition__info--name {
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
             }
-            
+        }
+        .weather--wrapper.show {
+            grid-template-rows: 1fr;
+        }
+        .weather--wrapper.fadein {
+            animation:fadein .5s ease-in;
+            opacity: 1;
+        }
+        .weather--wrapper.fadeout {
+            animation: fadeout .5s ease-out;
+            opacity: 0;
+        }
+         @keyframes fadein {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @keyframes fadeout {
+            from{opacity: 1;}
+            to{opacity: 0;}
         }
     }
 }
